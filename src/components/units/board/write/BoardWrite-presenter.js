@@ -15,3 +15,4 @@ export default function BoardWriteUI(props){
     )
 }
 
+export const exportTest = 3

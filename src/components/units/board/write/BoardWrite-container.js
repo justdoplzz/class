@@ -1,8 +1,8 @@
 import { useMutation } from '@apollo/client';
 import { useState } from 'react';
-import BoardWriteUI from './BoardWrite-presenter';
-import { graphqlSetting } from './BoardWrite-queries';
-
+import BoardWriteUI, { exportTest } from './BoardWrite-presenter'; // export default : 하나만 가져올 수 있음, 이름 변경 가능
+import { graphqlSetting } from './BoardWrite-queries'; // export : 골라서 가져오기 가능 , 이름 변경 불가능
+import * as S from './BoardWrite-styles';
 
 export default function BoardWrite(){
     const [writer, setWriter] = useState()
@@ -34,6 +34,13 @@ export default function BoardWrite(){
     return(
         <div>
             <div>------- BoardWrite-container 시작 부분 -------</div>
+            <hr/>
+           <div> export, export-default 테스트
+                {exportTest}
+                <S.RedInput type="text" placeholder='test'/>
+                <S.BlueButton>test버튼</S.BlueButton>
+            </div>
+            <hr/>
             <BoardWriteUI
                 aaa={onClickSubmit}
                 bbb={onChangeWriter}
