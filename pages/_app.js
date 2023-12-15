@@ -1,5 +1,4 @@
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client"
-import Layout from "../src/components/commons/layout/index"
 
 // 모든 페이지의 공통설정들 진행
 export default function App({ Component, pageProps }) {
@@ -13,9 +12,9 @@ export default function App({ Component, pageProps }) {
     <div>
       <div>-- _app.js 컴포넌트 시작부분</div>
       <ApolloProvider client={client}>
-        <Layout>
+        {/* <Layout> */}
           <Component {...pageProps} />
-        </Layout>
+        {/* </Layout> */}
       </ApolloProvider>
       <div>-- _app.js 컴포넌트 끝부분</div>
     </div>
